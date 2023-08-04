@@ -2,19 +2,23 @@ import "./App.css";
 import { useState } from "react";
 import aniversariantes from "./data/data";
 import Lista from "./Lista";
-import Inserir from "./Inserir";
 
 function App() {
     const [people, setPeople] = useState(aniversariantes);
     return (
-        <>
-            <Inserir people={people} />
-            <h1 className="text-secundary mb-4">Aniversariantes do Dia</h1>
-            <Lista people={people} />
+        <main className="card">
+            <h1
+                className="text-secundary mb-3 display-4 text-left"
+                style={{ fontSize: 48 }}
+            >
+                Aniversariantes do Dia
+            </h1>
+            <hr />
+            <Lista people={people} setPeople={setPeople} />
             <div className="d-flex justify-content-center align-items-center">
                 <button
                     type="button"
-                    className="btn btn-primary btn-lg mt-4"
+                    className="btn btn-one btn-lg"
                     onClick={() => {
                         setPeople([]);
                     }}
@@ -23,16 +27,16 @@ function App() {
                 </button>
                 <button
                     type="button"
-                    className="btn btn-secondary btn-sm text-center mt-4"
+                    className="btn-sm btn-undo"
                     style={{ height: 35 }}
                     onClick={() => {
                         setPeople(aniversariantes);
                     }}
                 >
-                    Desfazer
+                    <i className="bi bi-arrow-counterclockwise"></i>
                 </button>
             </div>
-        </>
+        </main>
     );
 }
 
