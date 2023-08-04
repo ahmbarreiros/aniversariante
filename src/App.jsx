@@ -6,12 +6,9 @@ import Lista from "./Lista";
 function App() {
     const [people, setPeople] = useState(aniversariantes);
     return (
-        <main className="card">
-            <h1
-                className="text-secundary mb-3 display-4 text-left"
-                style={{ fontSize: 48 }}
-            >
-                Aniversariantes do Dia
+        <main className="card card-width">
+            <h1 className="text-secundary mb-3 display-4 text-left">
+                Aniversariantes!
             </h1>
             <hr />
             <Lista people={people} setPeople={setPeople} />

@@ -6,8 +6,8 @@ const Aniversariante = ({ id, nome, idade, people, setPeople }) => {
         setPeople(novosAniversariantes);
     };
     return (
-        <div className="container-fluid d-flex">
-            <div className="d-flex flex-column mt-3 align-items-start w-100">
+        <div className="container-fluid d-flex anvs" style={{ maxWidth: 325 }}>
+            <div className="d-flex mt-3 w-100 anv-texts">
                 <h4 className="" style={{ fontSize: 22 }}>
                     {nome}
                 </h4>
